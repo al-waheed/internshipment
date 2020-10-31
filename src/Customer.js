@@ -19,7 +19,7 @@ function Customer(props) {
                  </div>
                  <div className='user-likes'>
                     <div className='likes'>
-                    <h4>LIKE:</h4> 
+                    <h4>LIKES:</h4> 
                     <p>{ props.user.likes.map(like => {
 
                    return  <h4 className='like'>{like}</h4>
@@ -29,12 +29,13 @@ function Customer(props) {
                     </div>
 
                     <div className='likes'>
-                   <h4>DISLIKE:</h4> 
+                   <h4>DISLIKES:</h4> 
                    <p>{props.user.dislikes.map(dislike => {
 
                      return <h4  className='like'>{dislike}</h4>
 
                    })}</p>
+                   <button ></button>
                    </div>
                  </div>
                </div>

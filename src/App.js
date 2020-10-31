@@ -31,8 +31,11 @@ render(){
                  </div>
                   </div>)
             })):
-  
-    <div className='center'> loading ....</div> 
+      <div className='load'>
+        <div className='loader'> </div> 
+        <h1>Please wait.....</h1>
+      </div>
+
 
   return (
   <div className="container">
@@ -42,7 +45,9 @@ render(){
       <div>
       {orders.user &&  <Customer user ={orders.user }/>}
       </div>
-      <div className='items'>{orderList}</div>
+      <div className='items'>
+            {orderList}
+        </div>
       <div className='footer-container'>
       <div className='footer-heading'>{orders.restaurant && orders.restaurant.name }</div>
       <div className='footer-state'>{orders.restaurant && orders.restaurant.state},{orders.restaurant && orders.restaurant.city}</div>
