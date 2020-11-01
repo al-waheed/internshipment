@@ -5,12 +5,13 @@ import OrderList from './pages/orderlIst'
 
 const App = () => {
   return (
-    <BrowserRouter>
-     <Route exact component = {UserInfo} path='/'/>
-     <Route exact component = {OrderList} path='/orders'/>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Route exact component={UserInfo} path='/' />
+        <Route exact component={OrderList} path='/orders' />
+      </BrowserRouter>
+    </div>
   )
 }
-
 
 export default App;

@@ -17,32 +17,27 @@ class UserInfo extends Component{
         })
       })
   }
-render(){
-  const { orders } = this.state;
+  render() {
+    const { orders } = this.state;
+    return (
+      <div className="container">
+        <nav>
+          <div className='navbar'>Fast Food Station</div>
+        </nav>
 
- return (
-   <div className="container">
-     <nav>
-       <div className='navbar'>Fast Food Station</div>
-     </nav>
-
-     {orders ? <div> {orders.user && <Customer user={orders.user} />}
-         <Link to={{ pathname: "/orders", data: orders }}> View Orders</Link>
-       </div> : 
-         (<div className='load'>
-           <div className='loader'> </div>
-           <h1>Please wait.....</h1>
-         </div>)
-     }
-     <div className='footer-container'>
-       <div className='footer-heading'>{orders.restaurant && orders.restaurant.name}</div>
-       <div className='footer-state'>{orders.restaurant && orders.restaurant.state},{orders.restaurant && orders.restaurant.city}</div>
-       <div className='footer-street'>{orders.restaurant && orders.restaurant.street},{orders.restaurant && orders.restaurant.zipcode}.</div>
-     </div>
-
-   </div>
-  )
- }
+        {
+          orders.items ? (<div> {orders.user && <Customer user={orders.user} />}
+            <div className='view'>
+              <Link to={{ pathname: "/orders", data: orders }} className='view-orders'> View Kumba Orders</Link>
+            </div>
+          </div>) : (<div className='load'>
+            <div className='loader'> </div>
+            <h1>Please wait.....</h1>
+          </div>)
+        }
+      </div>
+    )
+  }
 }
 
 export default UserInfo;
