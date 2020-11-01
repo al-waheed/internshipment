@@ -48,12 +48,12 @@ html{
     position: absolute;
     right: 20px;
     text-decoration: none;
-    color: white;
+    color: rgb(219, 216, 216);
     text-transform: uppercase;
 }
 
 .home-link:hover{
-    color:rgb(219, 216, 216);
+    color:white;
 }
 
 .navbar{
