@@ -35,7 +35,6 @@ function Customer(props) {
                      return <h4  className='like'>{dislike}</h4>
 
                    })}</p>
-                   <button ></button>
                    </div>
                  </div>
                </div>
