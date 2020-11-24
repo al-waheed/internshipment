@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Customer from './../Customer'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import dotEnv from 'dotenv'
+
+dotEnv.config();
 
 class UserInfo extends Component{
 
@@ -10,7 +13,7 @@ class UserInfo extends Component{
   }
 
   componentDidMount(){
-    axios.get('https:indapi.kumba.io/webdev/assignment')
+    axios.get(process.env.REACT_APP_URL)
       .then( res => {
         this.setState({
           orders : res.data
